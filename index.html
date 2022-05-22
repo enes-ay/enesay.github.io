@@ -5,44 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-    <script src="script.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    
 
     <title>Enes Ay Kişisel Websitesi</title>
 </head>
 <body>
 
-    <div class="container">
-
-        <header class="header">
-            <div class="logo">
-                <a href="#">ENES AY</a>
-            </div>
-            <ul>
+   <div class="container">
+       <div class="header">
+           
+           <div class="logo">
+            <a href="#">Enes Ay</a>
+           </div>
+           <ul>
                 <li><a href="#">ANASAYFA</a> </li>
                 <li><a href="#about">HAKKIMDA</a> </li>
-                <li><a href="#">ÖZGEÇMİŞ</a> </li>
+                <li><a href="#cv">ÖZGEÇMİŞ</a> </li>
                 <li><a href="#">BLOG</a> </li>
                 <li><a href="#">İLETİŞİM</a> </li>
-                
-            </ul>
-            
+           </ul>
+           <div  class="search_form ">
 
-        </header>
-        <div class="form">
-            
-                <button>giriş yap</button> 
-                <button  onclick="function1">kayıt ol</button>
-        
-        </div>
-        <div class="about-content">
-            <p id="about">Enes Ay <br>2002 Eskişehir doğumluyum. Bilgisayar Mühendisliği 2.sınıf öğrencisiyim. Kitap okumak,bisiklet sürmek ve yüzmekten hoşlanırım. Android Programlama ,Siber Güvenlikle ve IoT gibi alanları takip etmeyi severim</p>
-        </div>
-    
-    
+            <input id="search_input"  type="text"  placeholder="Yazınız"><button id="search_submit"><i class="fa-solid fa-magnifying-glass"></i></button></input>
+           </div>
+       </div> <!-- header finish-->
+       <div class="buttons">
+            <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="login"><i class="fa-solid fa-user-large"></i></button>
 
-    </div>
-    <div class="icon-bar">
+       </div>
+       <div class="about-content">
+        <p id="about">Enes Ay <br>2002 Eskişehir doğumluyum. Bilgisayar Mühendisliği 2.sınıf öğrencisiyim. 
+            Kitap okumak, bisiklet sürmek ve yüzmekten hoşlanırım. Android Programlama, 
+            Siber Güvenlik ve IoT gibi alanları takip etmeyi severim.</p>
+
+       </div>
+      
+       
+       
+   </div> <!-- container finish-->
+   <div class="contents">
+    <section class="cv">
+        <h2>Özgeçmiş</h2>
+        <h4>Enes Ay</h4>
+        <p> 
+         Doğum Tarihi:09.08.2002<br>
+         Doğum Yeri:Eskişehir <br></p>
+         <h3>Eğitim</h3>
+         Lisans:Bandırma Onyedi Eylül Üniversitesi Bilgisayar  Mühendisliği
+         2020-2024
+         <h3>İlgi Alanları:</h3>Android programlama,IoT<br>
+         <h3>Yetenekler:</h3>
+         JAVA,C++,C,Kotlin
+     </p>
+    </section>
+    
+   </div>
+
+
+    <div class="icon-bar active">
 
         <a href="https://github.com/enes-ay" class="github" target="_blank"><i class="fa fa-github"></i></a>
         <a href="https://www.google.com/intl/tr/gmail/about/" target="_blank" class="google"><i class="fa fa-google"></i></a>
@@ -53,10 +76,8 @@
     
 
     <div class="footer">
-        <p>Enes Ay <a href="#">  Copyright  </a>2022</p>
+        <p id="footer_info">All rights reserved 2022</p>
     </div>
-
-
-
+    <script src="script.js" ></script> 
 </body>
 </html>
