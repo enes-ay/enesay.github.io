@@ -19,11 +19,11 @@ body{
     background-size: cover; 
     background-color: rgb(23, 0, 52);
     background-repeat: no-repeat;
-      height: 100vh;
-     font-family: 'Rajdhani', sans-serif;
+    height: 100vh;
+    font-family: 'Rajdhani', sans-serif;
 }
 section{
-    padding: 220px 40px;
+    padding: 320px 40px;
 
 }
  .header{
@@ -50,7 +50,7 @@ section{
     color: azure;
     text-decoration: none;
     margin-right: 15px;
-    font-size: 28px;
+    font-size: 26px;
     font-family: 'Rajdhani', sans-serif;
   
 }  
@@ -119,11 +119,13 @@ section{
  border-style: solid;
  border-radius: 5px;
 }
-/*home start*/
+
+      /*home start*/
+
 .home{
    width: 700px;
-   padding-top: 90px;
-   margin-top: 250px;
+   padding-top: 50px;
+   margin-top: 10px;
    padding-left: 120px;
 
 }
@@ -144,15 +146,19 @@ section{
     font-size: 25px;
     color: white;
 }
+
         /*home finish*/
+  
+
         /*hakkımda start*/
+
 .hakkımda{
   text-align: start;
   flex-direction: column;
   display: flex;
   margin-right: auto; 
   margin-left: 25px;
-  width: 900px;
+  width: 600px;
 
 }
 .hakkımda h2{
@@ -164,69 +170,148 @@ section{
   font-size: 22px;
   color: white;
 }
+
         /*hakkımda finish*/
 
        /*özgeçmiş start*/
+
 .özgeçmiş{
-  width: 900px;
+  width:400px;
   margin-left: auto; 
   margin-right: 25px;
+  padding: 10px;
+  margin-bottom: 150px;
   
 }
 
 .özgeçmiş h2{
   color: white;
   font-size: 40px;
-  text-align: end;
+  text-align: center;
   margin-bottom: 27px;
 }
 .özgeçmiş p{
-  text-align: end;
+  text-align: start;
   color: white;
   font-size: 22px;
-
 }
+#name{
+  font-size: 28px;
+  text-align: start;
+}
+
 /*özgeçmiş finish*/
-.footer {
-    flex: 1;
-    padding: 11px;
-    background-color: rgba(18, 49, 142, 0.463);
-    text-align: center;
-    
+
+/*iletişim start*/
+
+.iletişim{
+  font-size: 24px;
+  color: white;
+  width: 600px;
+  text-align: start;
+  margin-left: 25px; 
+  margin-right: auto;
+ 
+
 }
-.footer p{
-    text-decoration: none;
-    color: rgb(228, 231, 239);
-    font-size: 18px;
+.iletişim p{
+  font-size: 22px;
+  margin-top: 12px;
+  
+
 }
 
-.social{
-    display: flex;
-    justify-content: center;
-    padding-bottom:  2px;
+
+/*iletişim finish*/
+
+/*hava durumu start*/
+.havaDurumu{
+  width: 200px;
+  height: 160px;
+  margin-left: auto;
+  margin-top: 114px;
+  margin-right: 40px;
+  border-radius: 20px;
+  padding: 5px;
+  background: url("forecast_background.jpg");
+  background-size: cover;
 }
-.social a{
-  padding: 9px;
-  margin: 9px;
-  border-radius: 12px;
-  margin-bottom: 40px;
+.havaDurumu h2{
+  text-align: center;
+  color: white;
+  font-size:28px;
 }
-  #instagram {
-    background: white;
-    color: rgb(201, 50, 183);
-  }
+#weather_result{
+  color: #ffffff;
+  font-size: 35px;
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 0,9px;
+  font-weight: bold;
   
-  #linkedin  {
-    background: #3535b9;
-    color: white;
-  }
-  
-  #github  {
-    background: #000000;
-    color: white;
-  } 
-  
-  #gmail  {
-    background: #ffffff;
-    color: red;
-  }
+}
+#details{
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 0,9px;
+  font-weight: bold;
+}
+
+/*hava durumu finish*/
+
+/* social start*/
+
+    .social{
+        display: flex;
+        justify-content: center;
+      
+    }   
+    .social a{
+      font-size: 15px;
+      padding: 9px;
+      border-radius: 14px;  
+      margin: 7px;
+      margin-bottom: 17px;
+      
+    }
+    #instagram {
+      background: rgb(255, 255, 255);
+      color: rgb(201, 50, 183);
+    }
+    
+    #linkedin  {
+      background: #0e76a8;
+      color: white;
+    }
+    
+    #github  {
+      color: white;
+      background-color: black;
+    }
+      
+    #gmail  {
+      background:   #ffffff;    
+      color: red;
+    }
+
+  /* social finish*/
+
+    .footer {
+      flex: 1;
+      padding: 11px;
+      background-color: rgba(18, 49, 142, 0.463);
+      text-align: center;
+      
+      }
+    .footer p{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+    }
+    
+
+   
