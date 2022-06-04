@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,23 +18,23 @@
            <div class="logo">
             <a href="#">Enes Ay</a>
            </div>
-           <ul>
+           <ul id="menufull">
                 <li><a href="#tohome">ANASAYFA</a> </li>
                 <li><a href="#tohakkımda">HAKKIMDA</a> </li>
                 <li><a href="#toözgeçmiş">ÖZGEÇMİŞ</a> </li>
-                <li><a href="#">BLOG</a> </li>
+                <li><a href="#tomessage_form">BİZE ULAŞ</a> </li>
                 <li><a href="#toiletişim">İLETİŞİM</a> </li>
            </ul>
-           <form class="search_form">
-
-            <input id="search_input" type="text" onkeyup="function_show()" placeholder="Yazınız">
-            <button id="search_submit"><i class="fa-solid fa-magnifying-glass"></i></button></input>
+           <form class="search_form"  name="f1" action=""
+           onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false">
+            <input id="search_input" type="text" value="" name=t1 placeholder="Yazınız">
+            <button type="submit" name=b1 id="search_submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
        </div> <!-- header finish-->
 
        <div class="buttons">
             <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button id="login"><i class="fa-solid fa-user-large"></i></button>
+            <a href="login.php"><button id="login" ><i class="fa-solid fa-user-large"></i></button></a>
         </div>
         <div class="havaDurumu">
            <h2 id="city_weather">
@@ -103,6 +104,18 @@
                     Odunpazarı/Eskişehir
                 </p>
         </section>
+        <section id="tomessage_form">
+            <div class="contact">
+
+                <h3>BİZE ULAŞ</h3>
+                <input class="inputs" type="text" name="isim" placeholder="Ad Soyad" required><br>
+                <input class="inputs" type="text" name="email"placeholder="E-mail" required><br>
+                <input class="inputs" type="text" name="tel" placeholder="Telefon "><br> 
+                <textarea id="message_area" name=mesaj placeholder="Mesajınız" required ></textarea>
+                <input id="gönder_btn"type="submit"  value="gönder" >
+
+            </div>
+    </section>
       <!-- CONTENTS FINISH -->
 
     <div class="social">
