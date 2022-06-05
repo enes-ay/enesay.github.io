@@ -29,41 +29,54 @@
 <body>
 
 <h1>Kayıtlar</h1>
-
+<!-- 
 <table id="users">
   <tr>
     <th>Ad Soyad</th>
-    <th>Mesaj </th>
-    <th>E-mail</th>
+    <th>e-mail </th>
+    <th>telefon</th>
+    <th>mesaj</th>
     
   </tr>
+  -->
   
-  <tr>
-    <td>Enes Ay</td>
-    <td>Not alındı</td>
-    <td>enesay240@gmail.com</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>Simon Crowther</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Paris spécialités</td>
-    <td>Marie Bertrand</td>
-    <td>France</td>
-  </tr>
+ 
 </table>
 
 </body>
 </html>
-<?php
 
+<?php
+include("connect.php");
+$sec="SELECT * FROM iletisim";
+$sonuc=$connect->query($sec);
+
+if($sonuc->num_rows>0)
+{
+  echo "<table id='users' >";
+  
+  echo "<th>Ad Soyad</th>
+  <th>Mesaj </th>
+  <th>E-mail</th>
+  <th>telefon</th>
+  ";
+
+  while($cek=$sonuc->fetch_assoc()){
+
+   
+    echo "<tr>";
+        echo "<td>".$cek['ad']."</td>";
+        echo "<td>".$cek['email']."</td>";
+        echo "<td>".$cek['telefon']."</td>";
+        echo "<td>".$cek['mesaj']."</td>";
+    echo "</tr>";
+    }
+    echo "</table>";
+    }
+    else{
+      echo "bulunamadı";
+
+    }
 session_start();
 if($_SESSION["user"]==""){
   echo "<script>window.location.href='logout.php'</script>";
@@ -74,6 +87,8 @@ else{
   echo "<a href='logout.php'>çıkış yap</a>";
 
 }
+
+
+
 ?>
-
-
+  

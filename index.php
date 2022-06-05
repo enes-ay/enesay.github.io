@@ -65,8 +65,9 @@
                         HAKKIMDA
                     </h2>
                     <p>
-                    2002 Eskişehir doğumluyum.Bandırma Onyedi Eylül Üniversitesi'nde
-                     Bilgisayar Mühendisliği 2.sınıf öğrencisiyim.
+                    2002 Eskişehir doğumluyum. Bandırma Onyedi Eylül Üniversitesi'nde
+                     Bilgisayar Mühendisliği 2.sınıf öğrencisiyim.Android Programlama ve Siber Güvenlik gibi konularla 
+                     ilgileniyorum. Bunların dışında belgesel ve yabancı dizi izlemeyi severim. 
         
                     </p>
 
@@ -103,19 +104,28 @@
                     enesay240@gmail.com<br>
                     Odunpazarı/Eskişehir
                 </p>
+
+                <!--Bize Ulaş Start -->
+
         </section>
         <section id="tomessage_form">
-            <div class="contact">
+            <form action="index.php" method="post">
+                 <div class="contact">
 
                 <h3>BİZE ULAŞ</h3>
-                <input class="inputs" type="text" name="isim" placeholder="Ad Soyad" required><br>
-                <input class="inputs" type="text" name="email"placeholder="E-mail" required><br>
-                <input class="inputs" type="text" name="tel" placeholder="Telefon "><br> 
-                <textarea id="message_area" name=mesaj placeholder="Mesajınız" required ></textarea>
-                <input id="gönder_btn"type="submit"  value="gönder" >
+                
+                    <input class="inputs" type="text" name="isim" placeholder="Ad Soyad" required><br>
+                    <input class="inputs" type="text" name="email"placeholder="E-mail" required><br>
+                    <input class="inputs" type="text" name="tel" placeholder="Telefon "><br> 
+                    <textarea id="message_area" name=mesaj placeholder="Mesajınız" required ></textarea>
+                    <input  type="submit" value="Gönder">
+                  </div>
 
-            </div>
-    </section>
+                  
+
+             </form>
+
+        </section>
       <!-- CONTENTS FINISH -->
 
     <div class="social">
@@ -142,4 +152,25 @@
 <?php
 
 include ("connect.php");
+
+if(isset($_POST["isim"],$_POST["tel"],$_POST["email"],$_POST["mesaj"])){
+
+    $ad=$_POST["isim"];
+    $email=$_POST["email"];
+    $tel=$_POST["tel"];
+    $mesaj=$_POST["mesaj"];
+
+    $ekle="INSERT INTO iletisim (ad, email, telefon,mesaj) 
+    VALUES('".$ad."','".$email."','".$tel."','".$mesaj."')";
+    }
+
+    if($connect->query($ekle)===true)
+    {
+        echo "<script>alert('mesajınız alındı')</script>";
+    }
+    else{
+        echo "<script>alert('mesajınız alınamadı')</script>";
+    }
+
+
 ?>
