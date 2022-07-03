@@ -29,6 +29,7 @@
 
      /*Weather api start*/
      
+     
      var  displayweather=response=>{
       let sonuc=document.getElementById("weather_result");
       let details=document.getElementById("details");
@@ -40,13 +41,13 @@
       
     } 
     window.onload=makeRequest();
-        
+       
     function makeRequest() {  
        fetch(URL)
       .then(weather => weather.json())
       .then(displayweather)
     }
-
+    
 
     
       /* Weather api finish */
