@@ -51,10 +51,9 @@
 
     
       /* Weather api finish */
+      
 
       /*search start */
-
-
 
       var TRange=null;
       function findString (str) {
