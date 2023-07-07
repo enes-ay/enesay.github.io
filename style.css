@@ -3,355 +3,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
-    *{
-        margin: 0;
-        padding: 0;
-        transition: 0.2s ease;
-    }
-    html{
-        display: flex;
-        flex-direction: column;
-        overflow-x: hidden;
-        
-    }
-    body{
-      background-image: url("background.jpg");
-        background-size: cover; 
-        background-color: rgb(23, 0, 52);
-        background-repeat: no-repeat;
-        height: 100vh;
-        font-family: 'Rajdhani', sans-serif;
-    }
-    section{
-        padding: 320px 40px;
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(67, 30, 85);
 
-    }
-    .header{
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 100%;
-        height: 80px;
-        background-color: rgba(18, 49, 142, 0.463);
-    }
-    .header ul{
-        float: right;
-        margin-right: 120px;
-        line-height: 75px;
-    }
-    .header ul li{
-      list-style: none;
-      display: inline-block;
-      margin:8px;
-      line-height: 75px;
-    
-    }
-    .header ul li a{
-        color: azure;
-        text-decoration: none;
-        margin-right: 15px;
-        font-size: 26px;
-        font-family: 'Rajdhani', sans-serif;
-      
-    }  
-    .header ul a:hover{
-      color: rgb(254, 1, 142);
-      
-    }
-    .header .logo{
-        display: inline-block;
-        margin-top: 23px;
-        margin-left: 40px;
-    }
-    .logo a{
-        text-decoration: none;
-        font-size: 33px;
-        font-family: 'Rajdhani', sans-serif;
-        font-weight: bold;
-        color: azure;
-        padding: 5px;
-        border-bottom:rgb(89, 60, 144);
-        border-bottom-style: solid;
-        border-bottom-left-radius: 25px;
-        border-top: rgb(254, 1, 144);
-        border-top-style: solid;
-        border-top-right-radius: 27px;
-        border-top-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        
-    }
-    .buttons{
-      position: fixed;
-      right: 0;
-      top: 0;
-      margin-right: 19px;
-      margin-top: 30px;
-    }
-    .buttons button:hover{
-    color: rgb(254, 1, 142);
-    }
+}
 
-    .buttons  button {
-    font-size: 17px;
-    font-style: italic;
-    color: azure;
-    padding: 4px;
-    background-color: rgba(18, 49, 142, 0.0001);
-    border-style: none;
-    border-radius: 8px;
-    margin-right: 14px;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    }
-    .search_form    {
-      position: fixed;
-      right: 0;
-      transform: scaleY(0);
-    }
-    .search_form.active{
-      position: fixed;
-      right: 0;
-      transform: scaleY(1);
-      
-    }
+.centered {
+  min-width: 450px;
+  min-height: 400px;
+  max-width: 650px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+}
 
-    #search_input ,#search_submit{
-    padding: 3px;
-    border-style: solid;
-    border-radius: 5px;
-    }
+@media (max-width: 768px) {
+  .centered {
+    max-width: 90%;
+  }
+}
 
-          /*home start*/
-
-    .home{
-      width: 900px;
-      padding-top: 50px;
-      margin-top: 10px;
-      padding-left: 120px;
-
-    }
-    .home .content{
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .home .content h3{
-        font-size: 70px;
-        color: rgb(255, 255, 255);
-        margin-bottom: 30px;
-          
-      }
-      
-
-            /*home finish*/
-      
-
-            /*hakkımda start*/
-
-    .hakkımda{
-      text-align: start;
-      flex-direction: column;
-      display: flex;
-      margin-right: auto; 
-      margin-left: 25px;
-      width: 600px;
-
-    }
-    .hakkımda h2{
-      color: white;
-      font-size: 40px;
-      margin-bottom: 27px;
-    }
-    .hakkımda p{
-      font-size: 22px;
-      color: white;
-    }
-
-            /*hakkımda finish*/
-
-          /*özgeçmiş start*/
-
-    .özgeçmiş{
-      width:400px;
-      margin-left: auto; 
-      margin-right: 25px;
-      padding: 10px;
-      margin-bottom: 150px;
-      margin-top: 120px;
-      
-    }
-
-    .özgeçmiş h2{
-      color: #ffffff;
-      font-size:35px;
-      text-align: center;
-      margin-bottom: 27px;
-    }
-    .özgeçmiş p{
-      text-align: start;
-      color: white;
-      font-size: 22px;
-    }
-    #name{
-      font-size: 28px;
-      text-align: start;
-    }
-
-    /*özgeçmiş finish*/
-
-    /*iletişim start*/
-
-    .iletişim{
-      font-size: 24px;
-      color: white;
-      width: 600px;
-      text-align: start;
-      margin-left: 25px; 
-      margin-right: auto;
-    
-
-    }
-    .iletişim p{
-      font-size: 22px;
-      margin-top: 12px;
-      
-
-    }
+.changing-text {
+  justify-content: center;
+  min-width: 550px;
+  max-width: 600px;
+  min-height: 80px;
+  margin: 20px;
+  font-size: 24px;
+  text-align: center;
+  width: 100%; 
+  color: wheat;
+}
+.content-box a{
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+.col-md-6 {
+  margin-bottom: 20px;
+}
 
 
-    /*iletişim finish*/
-
-    /*hava durumu start*/
-    .havaDurumu{
-      width: 200px;
-      height: 160px;
-      margin-left: auto;
-      margin-top: 114px;
-      margin-right: 40px;
-      border-radius: 20px;
-      padding: 5px;
-      background: url("forecast_background.jpg");
-      background-size: cover;
-    }
-    .havaDurumu h2{
-      text-align: center;
-      color: white;
-      font-size:28px;
-    }
-    #weather_result{
-      color: #ffffff;
-      font-size: 35px;
-      font-family: 'Rajdhani', sans-serif;
-      text-align: center;
-      padding: 5px;
-      letter-spacing: 0,9px;
-      font-weight: bold;
-      
-    }
-    #details{
-      color: #ffffff;
-      font-size: 20px;
-      font-family: 'Rajdhani', sans-serif;
-      text-align: center;
-      padding-top: 10px;
-      letter-spacing: 0,9px;
-      font-weight: bold;
-    }
-
-    /*hava durumu finish*/
-
-    /*bize ulaş start*/
-
-    .contact h3{
-      font-size: 35px;
-      color: white;
-      display: flex;
-      justify-content: start;
-      padding: 30px;
-    }
-    .inputs{
-      padding: 4px;
-      margin: 7px;
-      width: 300px;
-      height: 30px;
-      font-size: 17px;
-
-    }
-    #message_area{
-      height: 240px;
-      width: 300px;
-      padding: 4px;
-      margin: 7px;
-      font-size: 17px;
-    }
-    #tomessage_form{
-      margin-bottom: 190px;
-      width: 500px;
-      height: 800px;
-    }
-    input[type="submit"]{
-      
-      cursor: pointer;
-      background-color: rgb(187, 29, 181);
-      font-size: 25px;
-      padding: 10px;
-      width:180px;
-      clear:both ;
-      margin-left: 5.8px;
-    }
-  
-
-    /*bize ulaş finis*/
-
-/* social start*/
-
-    .social{
-        display: flex;
-        justify-content: center;
-      
-    }   
-    .social a{
-      font-size: 15px;
-      padding: 9px;
-      border-radius: 11px;  
-      margin: 7px;
-      margin-bottom: 17px;
-      
-    }
-    #instagram {
-      background: rgb(255, 255, 255);
-      color: rgb(201, 50, 183);
-    }
-    
-    #linkedin  {
-      background: #0e76a8;
-      color: white;
-    }
-    
-    #github  {
-      color: white;
-      background-color: black;
-    }
-      
-    #gmail  {
-      background:   #ffffff;    
-      color: red;
-    }
-
-  /* social finish*/
-
-    .footer {
-      flex: 1;
-      padding: 11px;
-      background-color: rgba(18, 49, 142, 0.463);
-      text-align: center;
-      
-      }
-    .footer p{
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-size: 18px;
-    }
-    
-
-   
