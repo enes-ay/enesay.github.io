@@ -14,7 +14,7 @@ body, html {
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -23,8 +23,8 @@ body, html {
 
 .centered {
   min-width: 450px;
-  min-height: 400px;
-  max-width: 650px;
+  min-height: 370px;
+  width: 650px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -34,28 +34,31 @@ body, html {
 
 @media (max-width: 768px) {
   .centered {
-    max-width: 90%;
+    max-width: 100%;
   }
+  .changing-text{
+    max-width: 100%;
+  }
+ 
 }
 
 .changing-text {
   justify-content: center;
-  min-width: 550px;
-  max-width: 600px;
+  min-width: 100%;
+  max-width: 100%;
   min-height: 80px;
-  margin: 20px;
   font-size: 24px;
   text-align: center;
   width: 100%; 
   color: wheat;
+  font-size: 20px;
+  padding: 50px;
 }
 .content-box a{
   font-size: 30px;
   color: rgb(255, 255, 255);
   padding: 20px;
-}
-.col-md-6 {
-  margin-bottom: 20px;
+
 }
 
 
